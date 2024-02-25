@@ -1,43 +1,48 @@
-<div class="row">
-  <div class="col-lg-4">
-    <div class="card" id="<%= dom_id poisson %>">
-          <div class="deck">
-                <div class="card hovercard">
-                  <div class="front face">
-                      <div class="parent">
-                          <div class="wave-card">
-                            <img  class="fish" style="width: 70%; height: 200px;" src="<%= poisson.image %>" lt="illustration de la carter">
-                            <div class="wave-card-shape carre"></div>
-                            <div class="wave-card-shape carre"></div>
-                            <div class="wave-card-shape carre"></div>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" id="<%= dom_id poisson %>">
+            <div class="deck">
+                  <div class="card hovercard">
+                    <div class="front face">
+                        <div class="parent">
+                            <div class="wave-card">
+                              <img  class="fish" style="width: 70%; height: 200px;" src="<%= poisson.image %>" lt="illustration de la carter">
+                              <div class="wave-card-shape carre"></div>
+                              <div class="wave-card-shape carre"></div>
+                              <div class="wave-card-shape carre"></div>
+                                
+                              <h3 class="wave-card-title"> <%= poisson.name %></h3>
+                                
+                              <div class="pricerarenutri">
+                                <p class="wave-card-subtitle"><%= poisson.price %>€</p>
+                                <p class="rarity"><%= poisson.rarity %></p>
+                              </div>
                               
-                            <h3 class="wave-card-title"> <%= poisson.name %></h3>
-                              
-                            <div class="pricerarenutri">
-                              <p class="wave-card-subtitle"><%= poisson.price %>€</p>
-                              <p class="rarity"><%= poisson.rarity %></p>
+                              </div>
                             </div>
-                            
-                            </div>
-                          </div>
-                      </div>
-                  </div>
+                        </div>
+                    </div>
 
 
-                  <div class="back face">
-                      <div class="parent">
-                          <div class="wave-card">
-                            <div class="wave-card-shape carre"></div>
-                            <div class="wave-card-shape carre"></div>
-                            <div class="wave-card-shape carre"></div>
-                              
-                            <h3 class="wave-card-title"><%= poisson.name %></h3>
-                            <p class="descriptionn"><%= poisson.description %></p>
-                          </div>
-                      </div>
+                    <div class="back face">
+                        <div class="parent">
+                            <div class="wave-card">
+                              <div class="wave-card-shape carre"></div>
+                              <div class="wave-card-shape carre"></div>
+                              <div class="wave-card-shape carre"></div>
+                                
+                              <h3 class="wave-card-title"><%= poisson.name %></h3>
+                              <p class="descriptionn"><%= poisson.description %></p>
+                              <button type="button" class="btn btn-outline-danger"><%= link_to "Edit this poisson" %>
+       </button>
+                              <button type="button" class="btn btn-outline-warning"><%= link_to "Supprimer ce poisson" %></button>
+                            </div>
+                        </div>
+                    </div>
                   </div>
-                </div>
-          </div> 
+            </div> 
+      </div>
     </div>
   </div>
 </div>

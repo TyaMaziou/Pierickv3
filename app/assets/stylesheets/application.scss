@@ -1,82 +1,81 @@
-  /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import "bootstrap";
 
- .row {
-  --bs-gutter-x: 3.5rem;
-  --bs-gutter-y: 1.5rem;
-  display: flex; 
-  flex-wrap: wrap;
-  padding-left: 3rem;
-  margin: 0 -15px;
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+@import "bootstrap";
+
+.row {
+display: flex;
+flex-wrap: wrap;
+padding-left: 3rem;
+margin: 0 -15px;
 }
 
 
 /*images*/
 .images{
- z-index: 2;
- position: relative;
+z-index: 2;
+position: relative;
 }
 
 img{
-  margin: 4px;
+margin: 4px;
 }
 
 .pierick{
-  margin-bottom: 3.5rem;
-  padding: 0;
-  width: 100%;
-  height: 80%;
+margin-bottom: 3.5rem;
+padding: 0;
+width: 100%;
+height: 80%;
 }
 
 .pierick img{
-  height: 50%;
-  width: 50%;
+height: 50%;
+width: 50%;
 }
 
 /*niveau de raretr
 .rarity strong{
- color: antiquewhite;
+color: antiquewhite;
 }
 
 .rarity p{
- color: #fff;
+color: #fff;
 }
 
 .rarity{
- background-color: goldenrod;
- color: #fff;
- text-align: center;
- padding-top: 2px;
- margin-top: 1rem;
- margin-left: 7rem;
- margin-right: 7rem;
- border-radius: 10px;
+background-color: goldenrod;
+color: #fff;
+text-align: center;
+padding-top: 2px;
+margin-top: 1rem;
+margin-left: 7rem;
+margin-right: 7rem;
+border-radius: 10px;
 }
 */
-/* BTN derrière de la carte 
+/* BTN derrière de la carte
 
 .edit_delet{
-  padding: 1rem;
-  margin: 0;
-  display: grid;
+padding: 1rem;
+margin: 0;
+display: grid;
 }
 
 .btn-warning{
-  width: 100%;
+width: 100%;
 }
 
 .btn-danger{
@@ -84,280 +83,276 @@ img{
 }
 */
 
-/*BTN  page index*/
+/*BTN page index*/
 
 /*
 
 .create_form{
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 */
 
 .btn_create{
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
 }
 
 @media (min-width: 992px){
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 100%;
+.col-lg-4 {
+flex: 0 0 auto;
+width: 100%;
 
-  }
+}
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 *{
-    box-sizing:border-box;
-  }
+box-sizing:border-box;
+}
 
 
 p{
-  width: fit-content;
-  margin: auto;
-  font-size: large;
+width: fit-content;
+margin: auto;
+font-size: large;
 }
 
 a {
-  text-decoration : none;
+text-decoration : none;
 }
 
 ul,
 ol {
-    list-style : none;
+list-style : none;
 }
 
 
 body {
-  font-family : 'Alata';
+font-family : 'Alata';
 }
 
 h3{
-  text-align: center;
-  font-size: 2.1rem;
-  margin-bottom: 0px;
+text-align: center;
+font-size: 2.1rem;
+margin-bottom: 0px;
 }
-  
+
 .deck{
-  width : 256px;
-  height : 324px;
-  position:relative;
-  perspective: 1000px;
+width : 256px;
+height : 324px;
+position:relative;
+perspective: 1000px;
 }
 
 .card{
-  width:100%;
-  height:100%;
-  transform-style: preserve-3d;
-  transition: all .5s linear;
+width:100%;
+height:100%;
+transform-style: preserve-3d;
+transition: all .5s linear;
+border: none;
 }
 .face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color:whitesmoke;  
-  border-radius:10px;
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+background-color:whitesmoke;
 }
 .back {
-  overflow:hidden;
-  z-index:-1;
-  display: block;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  &:before{
-    content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    background-size:100% 100%;
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-  }
+overflow:hidden;
+z-index:-1;
+display: block;
+-webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
+box-sizing: border-box;
+&:before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+background-size:100% 100%;
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-ms-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
 }
 .front, .back{
-  transition: all .5s linear;
+transition: all .5s linear;
 }
 .front{
-  z-index:1;
-  box-shadow: 11px 17px 48px #e5e5e5;
+z-index:1;
+box-shadow: 11px 17px 48px #e5e5e5;
 }
 .back{
-  box-shadow: 0 0 0 #aaa;
+box-shadow: 0 0 0 #aaa;
 }
 .flipped, .hovercard:hover{
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  .front{
-    box-shadow: 11px 17px 48px #e5e5e5;
-  }
-  .back{
-    box-shadow: 11px 17px 48px #e5e5e5;
-  }
+-webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
+.front{
+box-shadow: 11px 17px 48px #e5e5e5;
+}
+.back{
+box-shadow: 11px 17px 48px #e5e5e5;
+}
 }
 
 .buttonfish{
-  position:absolute;
-  bottom:30px;
-  border-radius:0 0 10px 10px;
-  text-align:center;
-  width:100%;
-  padding:15px;
-  color:whitesmoke;   
+position:absolute;
+bottom:30px;
+border-radius:0 0 10px 10px;
+text-align:center;
+width:100%;
+padding:15px;
+color:whitesmoke;
 }
 
 .parent {
-  width : fit-content;
-  height : fit-content;
+width : fit-content;
+height : fit-content;
 }
 
 .wave-card {
-    z-index:-1;
-    width : 256px;
-    height : 324px;
-    position : relative;
-    border-radius : 10px;
-    overflow : hidden;
-    background-color: #F7E5B0;
-}   
-    .carre {
-      position : absolute;
-      z-index:-1;
-      width : 400px;
-      height : 450px; //la taille du truc bleu 
-      opacity : 0.6;
-      top : -250px;
-      left : -100px;
-      border-radius : 150px;
-      background: #CDE5FF;
-      animation : rotate 30s linear infinite;
-    }
-    .carre:nth-child(1) {
-      top : -245px;
-      left : -98px;
-      opacity : 0.4;
-      animation : rotate 25s linear infinite;
-    }
-    .carre:nth-child(2) {
-      top : -240px;
-      opacity : 0.3;
-      animation : rotate 32s linear infinite;
-    }
-     &-subtitle {
-      font-size: 2.1rem;
-    }
+z-index:-1;
+width : 256px;
+height : 324px;
+position : relative;
+border-radius : 10px;
+overflow : hidden;
+background-color: #F7E5B0;
+}
+.carre {
+position : absolute;
+z-index:-1;
+width : 400px;
+height : 450px; //la taille du truc bleu
+opacity : 0.6;
+top : -250px;
+left : -100px;
+border-radius : 150px;
+background: #CDE5FF;
+animation : rotate 30s linear infinite;
+}
+.carre:nth-child(1) {
+top : -245px;
+left : -98px;
+opacity : 0.4;
+animation : rotate 25s linear infinite;
+}
+.carre:nth-child(2) {
+top : -240px;
+opacity : 0.3;
+animation : rotate 32s linear infinite;
+}
+&-subtitle {
+font-size: 2.1rem;
+}
 
 
 @keyframes rotate {
-  0% {
-     transform : rotate(0)
-  }
-  
-  50%{
+0% {
+transform : rotate(0)
+}
 
-       background-color : #6DB1FF;
-  }
-  
-  100% {
-    transform : rotate(1turn);
-  }
+50%{
+
+background-color : #6DB1FF;
+}
+
+100% {
+transform : rotate(1turn);
+}
 }
 
 .pricerarenutri {
-  display: flex;
-  margin: 0px 20px 20px 10px;
+display: flex;
+margin: 0px 20px 20px 10px;
 }
 
 .rarenutri{
-  display: flex;
-  flex-direction: column;
-  width: min-content;
+display: flex;
+flex-direction: column;
+width: min-content;
 }
 
 .img{
-  z-index : 5;
+z-index : 5;
 }
 
 .fish{
-  width: 100%;
+width: 100%;
 }
 
 .nutri{
-  width: 60%;
-  min-width: 100px;
+width: 60%;
+min-width: 100px;
 }
 
 .rarity{
-  width: min-content;
+width: min-content;
 }
 
 
 .descriptionn{
-  margin:20px;
+margin:20px;
 
 }
 
-
-/* Ajoutez ces media queries à la fin de votre fichier CSS */
-
 /* Pour les écrans de taille moyenne */
 @media (max-width: 991px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 57%; /* Deux cartes par ligne pour les écrans de taille moyenne */
-    margin-bottom: 1.5rem;
-  }
+.col-lg-4 {
+flex: 0 0 auto;
+width: 33%;
+margin-bottom: 1.5rem;
+}
 }
 
 /* Pour les écrans plus petits */
 @media (max-width: 767px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 100%; /* Une carte par ligne pour les écrans plus petits */
-    margin-bottom: 1.5rem;
-    padding: 0 15px; /* Rétablir la marge intérieure pour compenser la marge négative de la row */
-  }
+.col-lg-4 {
+flex: 0 0 auto;
+width: 100%;
+margin-bottom: 1.5rem;
+padding: 0 15px;
+}
 }
 
-/* Le reste de votre CSS reste inchangé */
 
 
 .container_pierick {
-  position: relative;
-  display: inline-block;
-  margin-left: 20rem;
+position: relative;
+display: inline-block;
+margin-left: 20rem;
 }
 
 .img_pierick{
-  height: 25rem;
-  width: 40rem;
-  object-fit: cover;
+height: 25rem;
+width: 40rem;
+object-fit: cover;
 }
 
 .texte-survol {
-  position: sticky;
-  bottom: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  left: 4rem;
-  visibility: hidden;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  padding: 5px;
-  margin-left: 2rem;
+position: sticky;
+bottom: 1rem;
+border-top-right-radius: 1rem;
+border-bottom-right-radius: 1rem;
+border-bottom-left-radius: 1rem;
+left: 4rem;
+visibility: hidden;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+border: 1px solid black;
+padding: 5px;
+margin-left: 2rem;
 }
 
 .container:hover .texte-survol {
-  visibility: visible;
+visibility: visible;
 }
