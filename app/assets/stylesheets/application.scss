@@ -14,8 +14,6 @@
  *= require_self
  */
  @import "bootstrap";
- @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-
 
  .row {
   --bs-gutter-x: 3.5rem;
@@ -26,19 +24,146 @@
   margin: 0 -15px;
 }
 
-*{
-  box-sizing:border-box;
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.333%; /* Utilisez une largeur de 33.333% pour que trois cartes tiennent sur une ligne */
+  padding: 0 15px; /* Ajoutez une marge intérieure pour compenser la marge négative de la row */
 }
+
+/*Carte 
+
+.card-body{
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.top_card{
+  padding: 10px;
+}
+
+.card{
+  border-radius: 3%;
+  height: 400px;
+  margin-bottom: 8%;
+  box-shadow: 5px 6px 12px 6px rgba(0, 0, 0, 0.35);
+  width: 92%;
+ }
+
+
+.card-img-top{
+  border-radius: 10% 10% 0 0;
+  object-fit: cover;
+  border-bottom: black 2px solid;
+
+}
+*/
+/*images*/
+.images{
+ z-index: 2;
+ position: relative;
+}
+
+img{
+  margin: 4px;
+}
+
+.pierick{
+  margin-bottom: 3.5rem;
+  padding: 0;
+  width: 100%;
+  height: 80%;
+}
+
+.pierick img{
+  height: 50%;
+  width: 50%;
+}
+
+/*niveau de raretr
+.rarity strong{
+ color: antiquewhite;
+}
+
+.rarity p{
+ color: #fff;
+}
+
+.rarity{
+ background-color: goldenrod;
+ color: #fff;
+ text-align: center;
+ padding-top: 2px;
+ margin-top: 1rem;
+ margin-left: 7rem;
+ margin-right: 7rem;
+ border-radius: 10px;
+}
+*/
+/* BTN derrière de la carte 
+
+.edit_delet{
+  padding: 1rem;
+  margin: 0;
+  display: grid;
+}
+
+.btn-warning{
+  width: 100%;
+}
+
+.btn-danger{
+
+}
+*/
+
+/*BTN  page index*/
+
+/*
+
+.create_form{
+  display: flex;
+  justify-content: center;
+}
+*/
+
+.btn_create{
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px){
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30.333%;
+
+  }
+}
+
+
+
+/**/
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    box-sizing:border-box;
+  }
 
 
 p{
-width: fit-content;
-margin: auto;
-font-size: large;
+  width: fit-content;
+  margin: auto;
+  font-size: large;
 }
 
 a {
-text-decoration : none;
+  text-decoration : none;
+}
+
+ul,
+ol {
+    list-style : none;
 }
 
 
@@ -51,38 +176,8 @@ h3{
   font-size: 2.1rem;
   margin-bottom: 0px;
 }
-
-/*images*/
-.images{
- z-index: 2;
- position: relative;
-}
-
-
-
-.pierick{
-  margin-bottom: 3.5rem;
-  padding: 0;
-  width: 100%;
-  height: 80%;
-}
-
-.img_pierick{
-  height: 25rem;
-  width: 40rem;
-  object-fit: cover;
-}
-
-.btn_create{
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wave-card-subtitle {
-  font-size: 28px;
-}
   
+
 .deck{
   width : 256px;
   height : 324px;
@@ -159,6 +254,11 @@ h3{
 }
 
 
+.parent {
+  width : fit-content;
+  height : fit-content;
+}
+
 .wave-card {
     z-index:-1;
     width : 256px;
@@ -167,8 +267,7 @@ h3{
     border-radius : 10px;
     overflow : hidden;
     background-color: #F7E5B0;
-  
-}
+    
     .carre {
       position : absolute;
       z-index:-1;
@@ -193,7 +292,7 @@ h3{
       animation : rotate 32s linear infinite;
     }
      &-subtitle {
-      font-size: rem;
+      font-size: 2.1rem;
     }
 }
 
@@ -212,6 +311,21 @@ h3{
   }
 }
 
+.pricerarenutri {
+  display: flex;
+  margin: 0px 20px 20px 10px;
+}
+
+.rarenutri{
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+
+.img{
+  z-index : 5;
+}
+
 .fish{
   width: 100%;
 }
@@ -223,14 +337,6 @@ h3{
 
 .rarity{
   width: min-content;
-  background-color: goldenrod;
-  color: #fff;
-  text-align: center;
-  padding-top: 2px;
-  margin-top: 1rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  border-radius: 10px;
 }
 
 
@@ -239,10 +345,41 @@ h3{
 
 }
 
+
+/* Ajoutez ces media queries à la fin de votre fichier CSS */
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 991px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 49%; /* Deux cartes par ligne pour les écrans de taille moyenne */
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Pour les écrans plus petits */
+@media (max-width: 767px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 100%; /* Une carte par ligne pour les écrans plus petits */
+    margin-bottom: 1.5rem;
+    padding: 0 15px; /* Rétablir la marge intérieure pour compenser la marge négative de la row */
+  }
+}
+
+/* Le reste de votre CSS reste inchangé */
+
+
 .container_pierick {
   position: relative;
   display: inline-block;
   margin-left: 20rem;
+}
+
+.img_pierick{
+  height: 25rem;
+  width: 40rem;
+  object-fit: cover;
 }
 
 .texte-survol {
@@ -262,13 +399,4 @@ h3{
 
 .container:hover .texte-survol {
   visibility: visible;
-}
-
-
-@media (min-width: 992px){
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 10.333%;
-
-  }
 }
