@@ -1,15 +1,13 @@
-
-
 <div class="carte-container">
-  <div class="carte" id="carte1">
+  <div class="carte" id="<%= dom_id poisson %>">
     <div class="recto">
       <div class="parents">
         <div class="wave-card">
           <img class="fish" style="width: 70%; height: 200px;" src="<%= poisson.image %>" alt="illustration de la carte">
 
+          <% 3.times do %>
             <div class="wave care"></div>
-            <div class="wave care"></div>
-            <div class="wave care"></div>
+          <% end %>
 
           <h3 class="wave-card-title"> <%= poisson.name %></h3>
             
@@ -21,21 +19,22 @@
       </div>
     </div>
     <div class="verso">
-          <div class="parents">
-            <div class="wave-card">
-              <div class="wave care"></div>
-              <div class="wave care"></div>
-              <div class="wave care"></div>
+      <div class="parents">
+        <div class="wave-card">
+          <% 3.times do %>
+            <div class="wave care"></div>
+          <% end %>
             
-              <h3 class="wave-card-title"><%= poisson.name %></h3>
-              <p class="descriptionn"><%= poisson.description %></p>
-              <%= link_to "Modifier", edit_poisson_path(poisson), class:"btn btn-warning" %>
-              <%= button_to "Supprimer", poisson, method: :delete, class:"btn btn-danger" %>
-            </div>
-          </div>
+          <h3 class="wave-card-title"><%= poisson.name %></h3>
+          <p class="descriptionn"><%= poisson.description %></p>
+          <%= link_to "Modifier", edit_poisson_path(poisson), class:"btn btn-warning" %>
+          <%= button_to "Supprimer", poisson, method: :delete, class:"btn btn-danger" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 
 
@@ -149,6 +148,7 @@ h1{
 
 .container:hover .texte-survol {
   visibility: visible;
+    background-color: #fff;
 }
 
 
@@ -163,20 +163,14 @@ h1{
 
 .verso .btn{
   margin: 1rem;
+  padding: 10px;
+  margin-top: auto;
 }
-
 a {
   text-decoration: none;
   background-color: yellow;
   color: #000;
 }
-
-.verso .btn{
-    padding: 10px;
-    margin-top: auto;
-}
-
-
 
 /* style de la carte */
 

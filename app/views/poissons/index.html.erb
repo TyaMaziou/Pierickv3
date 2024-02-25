@@ -24,19 +24,15 @@
 
 
     <div class="row " id="poissons">
-            <% @poissons.each do |poisson| %>
-          <div class="col-lg-4">
-            <div class="card" id="<%= dom_id poisson %>">
-              <div class="deck">
-                  <%= render poisson %>
-                
-              </div> 
-            
-                
-            </div>
+      <% @poissons.each do |poisson| %>
+        <div class="col-lg-4">
+          <div class="card" id="<%= dom_id poisson %>">
+            <div class="deck">
+              <%= render poisson %>  
+            </div> 
           </div>
-      
-        <% end %>
+        </div>
+      <% end %>
     </div>
 
   </div>
