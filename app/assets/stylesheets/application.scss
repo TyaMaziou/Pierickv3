@@ -22,41 +22,11 @@
   flex-wrap: wrap;
   padding-left: 3rem;
   margin: 0 -15px;
-}
-
-.col-lg-4 {
-  flex: 0 0 auto;
-  width: 33.333%; /* Utilisez une largeur de 33.333% pour que trois cartes tiennent sur une ligne */
-  padding: 0 15px; /* Ajoutez une marge intérieure pour compenser la marge négative de la row */
-}
-
-/*Carte 
-
-.card-body{
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.top_card{
-  padding: 10px;
-}
-
-.card{
-  border-radius: 3%;
-  height: 400px;
-  margin-bottom: 8%;
-  box-shadow: 5px 6px 12px 6px rgba(0, 0, 0, 0.35);
-  width: 92%;
- }
-
-
-.card-img-top{
-  border-radius: 10% 10% 0 0;
-  object-fit: cover;
-  border-bottom: black 2px solid;
+  justify-content: space-between; /* Ou utilisez justify-content: space-around; selon vos besoins */
 
 }
-*/
+
+
 /*images*/
 .images{
  z-index: 2;
@@ -344,30 +314,6 @@ h3{
   margin:20px;
 
 }
-
-
-/* Ajoutez ces media queries à la fin de votre fichier CSS */
-
-/* Pour les écrans de taille moyenne */
-@media (max-width: 991px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 49%; /* Deux cartes par ligne pour les écrans de taille moyenne */
-    margin-bottom: 1.5rem;
-  }
-}
-
-/* Pour les écrans plus petits */
-@media (max-width: 767px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 100%; /* Une carte par ligne pour les écrans plus petits */
-    margin-bottom: 1.5rem;
-    padding: 0 15px; /* Rétablir la marge intérieure pour compenser la marge négative de la row */
-  }
-}
-
-/* Le reste de votre CSS reste inchangé */
 
 
 .container_pierick {
