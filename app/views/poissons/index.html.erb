@@ -1,28 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
 
 <div class="container">
-  
+
   <h2>La Boutique de Pierick</h2>
-    <%= link_to "Nouveau poisson", new_poisson_path, class: "btn btn-primary btn_create" %>
-  
 
+  <%= link_to "Nouveau poisson", new_poisson_path, class: "btn btn-primary btn_create" %>
 
-  <div class="container_pierick">
-    <img class="img_pierick" src="https://media.discordapp.net/attachments/725870884606181388/1210542361436753930/pierick.png?ex=65eaf06d&is=65d87b6d&hm=2193205241914918ab3ea7468ef32bcc50c168b86b9253dbd80f9b96ea20b7d8&=&format=webp&quality=lossless&width=625&height=625" alt="Image descriptive">
-    <div class="texte-survol">
-      bienvenu dans ma poissonerie <br>
-      survole les cartes pour decouvrir mes poissons
-    </div>
+    
+<div class="container_pierick">
+  <img class="img_pierick" src="https://media.discordapp.net/attachments/725870884606181388/1210542361436753930/pierick.png?ex=65eaf06d&is=65d87b6d&hm=2193205241914918ab3ea7468ef32bcc50c168b86b9253dbd80f9b96ea20b7d8&=&format=webp&quality=lossless&width=625&height=625" alt="Image descriptive">
+  <div class="texte-survol">
+    bienvenu dans ma poissonerie <br>
+    survole les cartes pour decouvrir mes poissons
   </div>
+</div>
 
-  <div class="row" id="poissons">
-    <% @poissons.each do |poisson| %>
+
+<div class="row " id="poissons">
+
+
+        <% @poissons.each do |poisson| %>
       <div class="col-lg-4">
-        <%= render poisson %>
-        <%= link_to "Edit this poisson", poisson, class: "btn-warning" %>
-        <%= link_to "Supprimer ce poisson", poisson, class: "btn-danger" %>
+          <%= render poisson %>
+
+            <%= link_to "Edit this poisson", poisson, class: "btn-warning" %>
+            <%= link_to "Supprimer ce poisson", poisson, class: "btn-danger" %>
+
       </div>
+
+</div>
     <% end %>
-  </div>
-  
+
 
 </div>
