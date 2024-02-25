@@ -1,4 +1,3 @@
-
 /*
 * This is a manifest file that'll be compiled into application.css, which will include all the files
 * listed below.
@@ -23,8 +22,6 @@ padding-left: 3rem;
 margin: 0 -15px;
 }
 
-
-/*images*/
 .images{
 z-index: 2;
 position: relative;
@@ -45,53 +42,6 @@ height: 80%;
 height: 50%;
 width: 50%;
 }
-
-/*niveau de raretr
-.rarity strong{
-color: antiquewhite;
-}
-
-.rarity p{
-color: #fff;
-}
-
-.rarity{
-background-color: goldenrod;
-color: #fff;
-text-align: center;
-padding-top: 2px;
-margin-top: 1rem;
-margin-left: 7rem;
-margin-right: 7rem;
-border-radius: 10px;
-}
-*/
-/* BTN derrière de la carte
-
-.edit_delet{
-padding: 1rem;
-margin: 0;
-display: grid;
-}
-
-.btn-warning{
-width: 100%;
-}
-
-.btn-danger{
-
-}
-*/
-
-/*BTN page index*/
-
-/*
-
-.create_form{
-display: flex;
-justify-content: center;
-}
-*/
 
 .btn_create{
 justify-content: center;
@@ -143,7 +93,7 @@ margin-bottom: 0px;
 .deck{
 width : 256px;
 height : 324px;
-position:relative;
+position:absolute;
 perspective: 1000px;
 }
 
@@ -152,8 +102,8 @@ width:100%;
 height:100%;
 transform-style: preserve-3d;
 transition: all .5s linear;
-border: none;
 }
+
 .face {
 position: absolute;
 width: 100%;
@@ -169,6 +119,7 @@ display: block;
 -webkit-transform: rotateY(180deg);
 transform: rotateY(180deg);
 box-sizing: border-box;
+}
 &:before{
 content: "";
 position: absolute;
@@ -182,7 +133,7 @@ background-size:100% 100%;
 -o-transform: rotateY(180deg);
 transform: rotateY(180deg);
 }
-}
+
 .front, .back{
 transition: all .5s linear;
 }
@@ -196,13 +147,14 @@ box-shadow: 0 0 0 #aaa;
 .flipped, .hovercard:hover{
 -webkit-transform: rotateY(180deg);
 transform: rotateY(180deg);
+}
 .front{
 box-shadow: 11px 17px 48px #e5e5e5;
 }
 .back{
 box-shadow: 11px 17px 48px #e5e5e5;
 }
-}
+
 
 .buttonfish{
 position:absolute;
@@ -257,18 +209,18 @@ font-size: 2.1rem;
 
 
 @keyframes rotate {
-0% {
-transform : rotate(0)
-}
+  0% {
+  transform : rotate(0)
+  }
 
-50%{
+  50%{
 
-background-color : #6DB1FF;
-}
+  background-color : #6DB1FF;
+  }
 
-100% {
-transform : rotate(1turn);
-}
+  100% {
+  transform : rotate(1turn);
+  }
 }
 
 .pricerarenutri {
@@ -356,3 +308,4 @@ margin-left: 2rem;
 .container:hover .texte-survol {
 visibility: visible;
 }
+

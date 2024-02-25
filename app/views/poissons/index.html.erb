@@ -1,14 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-
-<div class="container">
-
   <h2>La Boutique de Pierick</h2>
-
-  <%= link_to "Nouveau poisson", new_poisson_path, class: "btn btn-primary btn_create" %>
-
-    
-  <div class="container_pierick">
+<div class="container_pierick">
     <img class="img_pierick" src="https://media.discordapp.net/attachments/725870884606181388/1210542361436753930/pierick.png?ex=65eaf06d&is=65d87b6d&hm=2193205241914918ab3ea7468ef32bcc50c168b86b9253dbd80f9b96ea20b7d8&=&format=webp&quality=lossless&width=625&height=625" alt="Image descriptive">
     <div class="texte-survol">
       bienvenu dans ma poissonerie <br>
@@ -16,10 +9,15 @@
     </div>
   </div>
 
+<div class="container">
+
+  <%= link_to "Nouveau poisson", new_poisson_path, class: "btn btn-primary btn_create" %>
+
 
   <div class="row " id="poissons">
-          <% @poissons.each do |poisson| %>
+          
         <div class="col-lg-4">
+          <% @poissons.each do |poisson| %>
           <div class="card" id="<%= dom_id poisson %>">
             <div class="deck">
                 <%= render poisson %>
