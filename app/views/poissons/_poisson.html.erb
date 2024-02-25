@@ -3,7 +3,7 @@
 <div class="carte-container">
   <div class="carte" id="carte1">
     <div class="recto">
-      <div class="parent">
+      <div class="parents">
         <div class="wave-card">
           <img class="fish" style="width: 70%; height: 200px;" src="<%= poisson.image %>" alt="illustration de la carte">
 
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="verso">
-          <div class="parent">
+          <div class="parents">
             <div class="wave-card">
               <div class="wave care"></div>
               <div class="wave care"></div>
@@ -69,8 +69,7 @@ h1{
 
 .recto,
 .verso {
-  width: 13rem;
-  height: 18rem;
+
   display: flex;
   flex-direction: column; /* Ajout de cette propriété pour centrer le contenu */
   align-items: center; /* Ajout de cette propriété pour centrer le contenu */
@@ -201,7 +200,6 @@ a {
   height : 450px;
   opacity : 0.6;
   top : -250px;
-  left : -100px;
   border-radius : 150px;
   background: #CDE5FF;
   animation : rotate 30s linear infinite;
