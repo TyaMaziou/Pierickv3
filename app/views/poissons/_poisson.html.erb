@@ -48,6 +48,7 @@ body {
   display: grid;
   height: 100%%;
   font-family : 'Alata';
+  justify-content: center;
 }
 
 h1{
@@ -69,7 +70,8 @@ h1{
 
 .recto,
 .verso {
-
+  width: 13rem;
+  height: 18rem;
   display: flex;
   flex-direction: column; /* Ajout de cette propriété pour centrer le contenu */
   align-items: center; /* Ajout de cette propriété pour centrer le contenu */
@@ -89,7 +91,6 @@ h1{
   color: #fff;
   transform: rotateY(180deg);
 }
-
 
 .carte:hover .recto {
   transform: rotateY(180deg);
@@ -134,6 +135,7 @@ h1{
 .texte-survol {
   position: relative;
   bottom: 8rem;
+  background-color: #fff;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -200,6 +202,7 @@ a {
   height : 450px;
   opacity : 0.6;
   top : -250px;
+  left : -100px;
   border-radius : 150px;
   background: #CDE5FF;
   animation : rotate 30s linear infinite;
